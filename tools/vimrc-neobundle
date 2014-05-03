@@ -1,0 +1,20 @@
+scripte utf-8
+set nocp
+filetype off
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    set runtimepath+=~/.vim/bundle/vimproc.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+if filereadable(expand("~/.vim/vim-bundles"))
+  source ~/.vim/vim-bundles
+endif
+
+filetype plugin indent on
+syntax enable
+
+let mapleader=","
+let maplocalleader="\\"
+let g:neobundle#install_process_timeout="600"
