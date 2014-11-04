@@ -28,23 +28,23 @@ if CheckConsole() == 1
 else
     set mouse=nv
     colo solarized
-    set bg=light
-    hi NonText ctermbg=white ctermfg=5
-    hi SpecialKey ctermbg=white ctermfg=5
-    hi LineNr ctermbg=white ctermfg=69
-    hi CursorLineNr ctermbg=white ctermfg=7
+    set bg=dark
+    hi NonText ctermfg=magenta
+    hi SpecialKey ctermfg=magenta
+    " hi LineNr ctermbg=white ctermfg=69
+    " hi CursorLineNr ctermbg=white ctermfg=7
     let g:airline_left_sep = '▙'
-    let g:airline_left_alt_sep = ''
+    " let g:airline_left_alt_sep = ''
     let g:airline_right_sep = '▟'
-    let g:airline_right_alt_sep = ''
-    let g:airline_fugitive_prefix = ' '
-    let g:airline_readonly_symbol = ''
-    let g:airline_linecolumn_prefix = '·'
-    let g:airline_powerline_fonts = 1
+    " let g:airline_right_alt_sep = ''
+    " let g:airline_fugitive_prefix = ' '
+    " let g:airline_readonly_symbol = ''
+    " let g:airline_linecolumn_prefix = '·'
+    " let g:airline_powerline_fonts = 1
     let g:airline_theme='solarized'
     au BufEnter * :IndentGuidesEnable
-    au VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=187
-    au VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=7
+    " au VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=187
+    " au VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=7
 endif
 
 hi clear SignColumn

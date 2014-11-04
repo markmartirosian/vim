@@ -5,16 +5,21 @@ filetype off
 if has('vim_starting')
     set rtp+=~/.vim/bundle/neobundle.vim/
     set rtp+=~/.vim/bundle/vimproc.vim/
-    call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+if filereadable(expand("~/.vim/.ready"))
+    call neobundle#begin(expand('~/.vim/bundle/'))
 
     if filereadable(expand("~/.vim/vim-bundles"))
       source ~/.vim/vim-bundles
     endif
+
+    call neobundle#end()
+
+    filetype plugin indent on
+    NeoBundleCheck
 endif
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-filetype plugin indent on
 syntax enable
 
 set fenc=utf8 enc=utf8 secure so=5 shm=atI vb t_vb= novb noeb
@@ -38,6 +43,7 @@ endtry
 
 let mapleader="\\"
 
+if filereadable(expand("~/.vim/.ready"))
 "Mnemonics: [F]ile
 let g:ctrlp_map = '<leader>f'
 
@@ -55,4 +61,4 @@ au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
   exe 'source' fpath
 endfor
-
+endif

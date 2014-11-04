@@ -13,5 +13,4 @@ vim -u ~/.vim/tools/vimrc-neobundle \
     -c "try | NeoBundleUpdate! $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 
-
-
+touch ~/.vim/.ready
