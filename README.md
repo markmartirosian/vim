@@ -5,12 +5,17 @@
     ln -s $(pwd)/whit-vim/vimrc ~/.vimrc
     ~/.vim/tools/update
 
----
-
 # Cheat Sheet
 
 |                | Vim
 |             ---|---
+| \\-q           | Deletes the current buffer and closes the current window
+| \\-Q           | Deletes the current buffer and preserves the current window
+| \\-f           | File finder
+| \\-m           | Most recently used (MRU) files finder
+| \\-f           | Buffer finder
+| \\-s           | Check syntax
+| \\-u           | Undo tree
 | zz             | move current line to the middle of the screen
 | zt             | move current line to the top of the screen
 | zb             | move current line to the bottom of the screen
@@ -50,12 +55,6 @@
 | j              | easymotion-j
 | k              | easymotion-k
 | h              | easymotion-linebackward
-
-|                | Multi Cursor
-|             ---|---
-| C-n            | Next Key
-| C-p            | Previous Key
-| C-x            | Skip Key
 
 |                | CtrlP (open)
 |             ---|---

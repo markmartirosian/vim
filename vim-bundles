@@ -1,37 +1,44 @@
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'bling/vim-bufferline'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'mbbill/undotree'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'klen/python-mode'
 NeoBundle 'ehamberg/vim-cute-python'
-NeoBundle 'gregsexton/gitv'
-NeoBundle 'leafo/moonscript-vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'roman/golden-ratio'
-NeoBundle 'ervandew/supertab'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'chrisbra/csv.vim'
+NeoBundle 'sheerun/vim-polyglot'
+
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'mhinz/vim-sayonara'
+NeoBundle 'wincent/terminus'
+NeoBundle 'takac/vim-hardtime'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'haya14busa/incsearch.vim'
+
 NeoBundle 'Valloric/YouCompleteMe', {
-            \ 'build' : {
-            \    'unix' : './install.sh --clang-completer --system-libclang'
-            \ },
-\ }
+     \ 'build'      : {
+        \ 'mac'     : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+        \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+        \ 'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+        \ 'cygwin'  : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+        \ }
+     \ }
+
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'mbbill/undotree'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'takac/vim-hardtime'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'saltstack/salt-vim'
-NeoBundle 'bkad/vim-terraform'
+
+
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'terryma/vim-multiple-cursors'
+"NeoBundle 'terryma/vim-expand-region'
+"NeoBundle 'roman/golden-ratio'
+"NeoBundle 'gregsexton/gitv'

@@ -25,7 +25,7 @@ syntax enable
 set fenc=utf8 enc=utf8 secure so=5 shm=atI vb t_vb= novb noeb
 set dir=~/.vim/tmp/sessions bdir=~/.vim/tmp/backup
 set nosol tf nonu ru sc sb spr nofen ve=onemore backup
-set gcr=a:blinkon0 ls=2 cot=longest,menuone hi=5000
+set gcr=a:blinkon0 ls=2 hi=5000 cot=longest,menuone
 set hls is ws ic scs so=3 sj=5 siso=7 ss=1 fo-=o sw=4 sts=4 et ai hid
 set cpt+=kspell cpt-=t bs=indent,eol,start vi+=! vi='250,<0,r/tmp
 set lcs=eol:¬,trail:· shm+=filmnrxoOtT ww=<,>,h,l noswf mat=2 ar
@@ -44,21 +44,23 @@ endtry
 let mapleader="\\"
 
 if filereadable(expand("~/.vim/.ready"))
-"Mnemonics: [F]ile
-let g:ctrlp_map = '<leader>f'
+    "Mnemonics: [F]ile
+    let g:ctrlp_map = '<leader>f'
 
-"Mnemonics: [B]uffer
-nn <leader>b :CtrlPBuffer<CR>
+    "Mnemonics: [B]uffer
+    nn <leader>b :CtrlPBuffer<CR>
 
-"Mnemonics: [S]yntax
-nn <leader>s :SyntasticCheck<CR>
 
-"Mnemonics: [U]ndo
-nn <leader>u :UndotreeToggle<CR>
+    "Mnemonics: [M]ost Recently Used
+    nn <leader>m :CtrlPMRU<CR>
 
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+    "Mnemonics: [S]yntax
+    nn <leader>s :SyntasticCheck<CR>
 
-for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
-  exe 'source' fpath
-endfor
+    "Mnemonics: [U]ndo
+    nn <leader>u :UndotreeToggle<CR>
+
+    for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
+      exe 'source' fpath
+    endfor
 endif

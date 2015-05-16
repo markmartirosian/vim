@@ -24,4 +24,4 @@ syntax enable
 
 let mapleader=","
 let maplocalleader="\\"
-let g:neobundle#install_process_timeout="600"
+let g:neobundle#install_process_timeout="1500"

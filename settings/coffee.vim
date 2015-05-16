@@ -7,3 +7,5 @@ let coffee_run_vert = 1
 augroup CoffeeBufNew
     autocmd User * set wrap
 augroup END
+
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
