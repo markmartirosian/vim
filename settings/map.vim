@@ -1,8 +1,8 @@
-nn <C-H> <C-W>h
-nn <C-J> <C-W>j
-nn <C-K> <C-W>k
-nn <C-L> <C-W>l
-nn ; :
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+" nn ; :
 cm WQ wq
 cm wQ wq
 cm Tabe tabe

@@ -27,7 +27,7 @@ if CheckConsole() == 1
     syntax on
 else
     set mouse=nv
-    colo solarized
+    colo gruvbox
     set bg=dark
     hi NonText ctermfg=magenta
     hi SpecialKey ctermfg=magenta
@@ -40,7 +40,6 @@ else
     " let g:airline_fugitive_prefix = ' '
     " let g:airline_readonly_symbol = ''
     " let g:airline_linecolumn_prefix = '·'
-    " let g:airline_powerline_fonts = 1
     let g:airline_theme='solarized'
     au BufEnter * :IndentGuidesEnable
     " au VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=187
@@ -49,6 +48,18 @@ endif
 
 hi clear SignColumn
 let g:bufferline_echo=0
+let g:bufferline_show_bufnr = 0
+let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline_powerline_fonts=0
+let g:airline_theme="tomorrow"
+
 
 au FileType help,qf setl nowrap nofen nospell nocul nolist
 au FileType help,qf setl stl=\ %n\ \ %f%=%L\ lines
+
+let g:tmuxline_powerline_separators = 0
+
+let g:tmuxline_preset = 'nightly_fox'
+

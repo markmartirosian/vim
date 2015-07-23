@@ -44,6 +44,8 @@ endtry
 let mapleader="\\"
 
 if filereadable(expand("~/.vim/.ready"))
+    nn <space> :bn<CR>
+
     "Mnemonics: [F]ile
     let g:ctrlp_map = '<leader>f'
 

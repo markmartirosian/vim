@@ -38,24 +38,6 @@
 | aM             | Select a function or method. Ex: vaM, daM, yaM, caM
 | iM             | Select inner function or method. Ex: viM, diM, yiM, ciM
 
-|                | EasyMotion
-|             ---|---
-| f              | easymotion-s
-| t              | easymotion-t
-| T              | easymotion-T
-| w              | easymotion-w
-| W              | easymotion-W
-| b              | easymotion-b
-| B              | easymotion-B
-| e              | easymotion-e
-| E              | easymotion-e
-| ge             | easymotion-ge
-| gE             | easymotion-gE
-| l              | easymotion-lineforward
-| j              | easymotion-j
-| k              | easymotion-k
-| h              | easymotion-linebackward
-
 |                | CtrlP (open)
 |             ---|---
 | F5             | purge the cache for the current directory
