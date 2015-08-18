@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# <doc>
+#
+# Update vim bundles.
+#
+# </doc>
+#
+# <import>
+#
+# collection-message
+# collection-shell
+#
+# </import>
+
+main () {
+    _verbose 1
+    _catchExceptions
+    _enableStrictMode
+
+    if [ -d "$HOME/.vim" ] || [ -L "$HOME/.vim" ]; then
+        if [ ! -f "$HOME/.vim/.ready" ]
+        then
+            _die "Install bundles first."
+        else
+            local path
+            path="$HOME/.vim/bundle"
+            local OPWD=$PWD ; cd "${path}" || exit
+            vim -N -u "$HOME/.vim/vimrc-neobundle" \
+                -c "try | NeoBundleCheckUpdate $* | finally | qall! | endtry" \
+                -U NONE -i NONE -V1 -e -s
+            echo ''
+            cd "${OPWD}" || exit
+        fi
+    fi
+}
+

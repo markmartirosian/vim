@@ -4,3 +4,6 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "_manage"]
+	path = _manage
+	url = https://github.com/eitherlands/_manage.git

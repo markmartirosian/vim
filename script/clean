@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# <doc>
+#
+# Remove all vim bundles.
+#
+# </doc>
+#
+# <import>
+#
+# collection-message
+# collection-shell
+#
+# </import>
+
+main () {
+    _catchExceptions
+    _enableStrictMode
+
+    local path
+    local dir
+    path="$HOME/.vim/bundle"
+    local OPWD=$PWD ; cd "${path}" || exit
+    for dir in "${path}"/*
+    do
+        if [   -d "${dir}" ] &&
+           [[ "$(basename "${dir}")" != "vimproc.vim" ]] &&
+           [[ "$(basename "${dir}")" != "neobundle.vim" ]]
+        then
+            _info "Removing $(basename "${dir}")"
+            rm -rf "${dir}"
+        fi
+    done
+    [ -e "$HOME/.vim/.ready" ] && rm -f "$HOME/.vim/.ready"
+    cd "${OPWD}" || exit
+}
+

@@ -1,9 +1,7 @@
 # whit-vim
 
-    git clone https://github.com/epiloque/whit-vim
-    ln -s $(pwd)/whit-vim ~/.vim
-    ln -s $(pwd)/whit-vim/vimrc ~/.vimrc
-    ~/.vim/tools/update
+    git clone --recursive https://github.com/epiloque/whit-vim ~/.vim
+    ~/.vim/manage install
 
 # Cheat Sheet
 

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+#
+# <doc>
+#
+# Install vim bundles.
+#
+# </doc>
+#
+# <import>
+#
+# collection-message
+# collection-shell
+#
+# </import>
+
+main () {
+    _verbose 1
+    _catchExceptions
+    _enableStrictMode
+
+    if [ -d "$HOME/.vim" ] || [ -L "$HOME/.vim" ]; then
+        local path
+        path="$HOME/.vim/bundle"
+        local OPWD=$PWD ; cd "${path}" || exit
+        git submodule update --init --recursive
+        git submodule foreach git pull origin master
+
+        if [ -d "$HOME/.vim/bundle/vimproc.vim" ]; then
+            cd "$HOME/.vim/bundle/vimproc.vim" && make &> /dev/null
+        fi
+    fi
+    cd "${path}" || exit
+    vim -N -u "$HOME/.vim/vimrc-neobundle" \
+        -c "try | NeoBundleUpdate! $* | finally | qall! | endtry" \
+        -U NONE -i NONE -V1 -e -s
+
+    [ ! -e "$HOME/.vim/.ready" ] && touch "$HOME/.vim/.ready"
+    cd "${OPWD}" || exit
+}
+

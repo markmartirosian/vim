@@ -1,9 +1,9 @@
-scripte utf-8
-set nocp
-filetype off
-
+if 0 | endif
 
 if has('vim_starting')
+    if &compatible
+        set nocompatible
+    endif
     set rtp+=~/.vim/bundle/neobundle.vim/
     set rtp+=~/.vim/bundle/vimproc.vim/
 endif
@@ -11,13 +11,11 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 if filereadable(expand("~/.vim/vim-bundles"))
-  source ~/.vim/vim-bundles
+    source ~/.vim/vim-bundles
 endif
 
 " NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
-
-
 
 filetype plugin indent on
 syntax enable
