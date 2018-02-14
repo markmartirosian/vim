@@ -9,6 +9,7 @@
 
 ```sh
 git clone --depth 1 --recursive https://github.com/l5x/vim.git ~/.vim
+ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vim/vimrc ~/.vimrc
 ~/.vim/manage install
 ```
@@ -20,7 +21,6 @@ ln -s ~/.vim/vimrc ~/.vimrc
 | \\-q           | Deletes the current buffer and closes the current window
 | \\-Q           | Deletes the current buffer and preserves the current window
 | \\-f           | File finder
-| \\-m           | Most recently used (MRU) files finder
 | \\-b           | Buffer finder
 | \\-c           | Choose Window
 | \\-u           | Undo tree
@@ -34,17 +34,6 @@ ln -s ~/.vim/vimrc ~/.vimrc
 | Ctrl-d         | Moves screen down ½ page
 | Ctrl-b         | Moves screen up one page
 | Ctrl-f         | Moves screen down one page
-
-|                | CtrlP (open)
-|             ---|---
-| F5             | Purge the cache for the current directory
-| c-f c-b        | Cycle between modes
-| c-r            | Switch to regexp mode
-| c-j c-k        | Navigate the result list
-| c-t c-v c-x    | Open the selected entry in a new tab or in a new split
-| c-n c-p        | Select the next/previous string in the prompt's history
-| c-y            | Create a new file and its parent directories
-| c-z c-o        | Mark/unmark multiple files and open them
 
 |                    | TComment
 |                 ---|---
