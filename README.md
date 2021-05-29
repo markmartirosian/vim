@@ -1,9 +1,7 @@
-# vim
-
-## Installation
+## Install
 
 ```sh
-git clone --depth 1 --recursive https://github.com/l5x/vim.git ~/.vim
+git clone --depth 1 --recursive https://github.com/markmartirosian/vim.git ~/.vim
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vim/vimrc ~/.vimrc
 ~/.vim/manage install
